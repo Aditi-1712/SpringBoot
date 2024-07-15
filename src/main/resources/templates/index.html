@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Table</title>
+</head>
+<body>
+<h1>Select Table</h1>
+
+    <form th:action="@{customerView}" method="get">
+
+        <button type="submit" name="customer">View Customer Table</button>
+    </form>
+
+    <form th:action="@{orderView}" method="get">
+        <button type="submit" name="order">View Order Table</button>
+    </form>
+
+    <form th:action="@{productView}" method="get">
+        <button type="submit" name="product">View Product Table</button>
+    </form>
+
+    <form th:action="@{shippingView}" method="get">
+        <button type="submit" name="shipping">View Shipping Table</button>
+    </form>
+
+<h1>Choose table to enter data</h1>
+
+<form th:action="@{addCustomer}" method="get">
+
+    <button type="submit" name="customer">Customer Table</button>
+</form>
+
+<form th:action="@{addOrder}" method="get">
+    <button type="submit" name="order">Order Table</button>
+</form>
+
+<form th:action="@{addProduct}" method="get">
+    <button type="submit" name="product">Product Table</button>
+</form>
+
+<form th:action="@{addShipping}" method="get">
+    <button type="submit" name="shipping">Shipping Table</button>
+</form>
+
+
+    <p th:if="${error}" th:text="${error}"></p>
+
+</body>
+</html>

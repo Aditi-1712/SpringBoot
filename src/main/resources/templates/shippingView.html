@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Table: SHIPPING</title>
+</head>
+<body>
+<h1> Table : Shipping </h1>
+
+<table th:border="2" th:cellpadding="4">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Method</th>
+        <th>Days to ship</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="shipping: ${data}">
+        <td th:text="${shipping.id}"></td>
+        <td th:text="${shipping.method}"></td>
+        <td th:text="${shipping.daysToShip}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
